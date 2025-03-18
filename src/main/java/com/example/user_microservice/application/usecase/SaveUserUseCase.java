@@ -1,0 +1,21 @@
+package com.example.user_microservice.application.usecase;
+
+import com.example.user_microservice.domain.model.User;
+import com.example.user_microservice.domain.repository.UserRepository;
+
+public class SaveUserUseCase {
+    private final UserRepository userRepository;
+
+    public SaveUserUseCase(UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
+
+    public User execute(User user) throws IllegalAccessException {
+        if(userRepository.findByEmail(user.getEmail()).isPresent()){
+            throw new IllegalAccessException("El correo ya está registrado carechimba");
+        }
+
+        return userRepository.save(user);
+    }
+}
+
