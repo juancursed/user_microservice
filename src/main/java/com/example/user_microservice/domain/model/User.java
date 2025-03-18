@@ -3,6 +3,7 @@ package com.example.user_microservice.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.persistence.GenerationType;
+import java.util.UUID;
 
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private String name;
     private String email;
@@ -29,7 +30,7 @@ public class User {
         this.bornDate = bornDate;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
