@@ -5,10 +5,10 @@ import com.example.user_microservice.domain.repository.UserRepository;
 
 import java.util.UUID;
 
-public class GetUserById {
+public class GetUserByIdUseCase {
     private final UserRepository userRepository;
 
-    public GetUserById(UserRepository userRepository){
+    public GetUserByIdUseCase(UserRepository userRepository){
         this.userRepository  = userRepository;
     }
 

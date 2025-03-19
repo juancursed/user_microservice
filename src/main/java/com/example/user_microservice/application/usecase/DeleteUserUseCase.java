@@ -11,8 +11,8 @@ public class DeleteUserUseCase {
         this.userRepository = userRepository;
     }
 
-    public void execute(UUID id) {
+    public User execute(UUID id) {
         //-----------AQUI VAN LAS EXCEPCIONES PARA VALIDAR---------------
-        userRepository.deleteUser(id);
+        return userRepository.deleteUser(id);
     }
 }

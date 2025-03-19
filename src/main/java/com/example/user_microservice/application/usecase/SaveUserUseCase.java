@@ -10,9 +10,9 @@ public class SaveUserUseCase {
         this.userRepository = userRepository;
     }
 
-    public User execute(User user) throws IllegalAccessException {
+    public User execute(User user) {
         if(userRepository.findByEmail(user.getEmail()).isPresent()){
-            throw new IllegalAccessException("El correo ya está registrado carechimba");
+            throw new IllegalArgumentException("El correo ya está registrado carechimba");
         }
 
         return userRepository.save(user);
