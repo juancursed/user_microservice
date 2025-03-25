@@ -1,25 +1,25 @@
 package com.example.user_microservice.application.usecase;
 
-import com.example.user_microservice.domain.model.Client;
+
 import com.example.user_microservice.domain.model.User;
 import com.example.user_microservice.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class SaveClientUseCase {
+public class SaveUserUseCase {
     private final UserRepository userRepository;
 
-    public SaveClientUseCase(UserRepository userRepository){
+    public SaveUserUseCase(UserRepository userRepository){
         this.userRepository = userRepository;
     }
 
-    public Client execute(Client client) {
-        if(userRepository.findByEmail(client.getEmail()).isPresent()){
+    public User execute(User user) {
+        if(userRepository.findByEmail(user.getEmail()).isPresent()){
             throw new IllegalArgumentException("El correo ya está registrado carechimba");
         }
 
-        return (Client) userRepository.save(client);
+        return (User) userRepository.save(user);
     }
 }
 
