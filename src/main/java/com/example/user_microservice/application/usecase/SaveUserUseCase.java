@@ -16,7 +16,7 @@ public class SaveUserUseCase {
 
     public User execute(User user) {
         if(userRepository.findByEmail(user.getEmail()).isPresent()){
-            throw new IllegalArgumentException("El correo ya está registrado carechimba");
+            throw new IllegalArgumentException("El correo ya está registrado");
         }
 
         return (User) userRepository.save(user);
