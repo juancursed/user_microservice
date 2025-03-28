@@ -1,6 +1,10 @@
 package com.example.user_microservice.delivery.rest;
 
 import com.example.user_microservice.application.usecase.*;
+import com.example.user_microservice.application.usecase.DeleteUserUseCase;
+import com.example.user_microservice.application.usecase.GetUserByEmailUseCase;
+import com.example.user_microservice.application.usecase.GetUserByIdUseCase;
+import com.example.user_microservice.application.usecase.SaveUserUseCase;
 import com.example.user_microservice.domain.model.User;
 import org.springframework.web.bind.annotation.*;
 
