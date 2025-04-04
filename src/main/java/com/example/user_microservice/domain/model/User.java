@@ -67,24 +67,5 @@ public class User {
     @NotNull(message = "El rol es obligatorio")
     @Enumerated(EnumType.STRING)
     private Role role;
-
-    public User() {}
-
-    public User(String name, String email, Date bornDate){
-        this.name = name;
-        this.email = email;
-        this.bornDate = bornDate;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 }
+

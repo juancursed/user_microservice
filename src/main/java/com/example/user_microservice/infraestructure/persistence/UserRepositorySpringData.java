@@ -13,5 +13,4 @@ import java.util.UUID;
 public interface UserRepositorySpringData extends JpaRepository<User, UUID>, UserRepository {
     @Override
     Optional<User> findByEmail(String email);
-
 }
