@@ -41,5 +41,5 @@ jobs:
         run: mvn clean package
       
       - name: BUILD DOCKER IMAGE
-        run: docker build -t user_service:latest
+        run: docker build -t user_service:latest .
       
