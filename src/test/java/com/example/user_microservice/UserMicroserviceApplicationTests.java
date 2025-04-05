@@ -3,6 +3,7 @@ package com.example.user_microservice;
 import com.example.user_microservice.application.usecase.SaveUserUseCase;
 import com.example.user_microservice.domain.model.User;
 import com.example.user_microservice.domain.model.Role;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,7 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@Transactional
 class UserMicroserviceApplicationTests {
 
     @Autowired
