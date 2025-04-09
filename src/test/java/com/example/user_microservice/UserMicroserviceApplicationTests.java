@@ -7,10 +7,12 @@ import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.UUID;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,6 +24,7 @@ class UserMicroserviceApplicationTests {
     private SaveUserUseCase saveUserUseCase;
 
     @Test
+    @Rollback
     void testCrearUsuario() throws ParseException {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -29,7 +32,7 @@ class UserMicroserviceApplicationTests {
         User nuevo = new User();
         nuevo.setFirstName("Juan");
         nuevo.setLastName("Trin");
-        nuevo.setEmail("juantrin@gmail.com");
+        nuevo.setEmail("juantrin"+ UUID.randomUUID().toString() +"@gmail.com");
         nuevo.setPassword("Wosito123"); // >= 8 caracteres
         nuevo.setBornDate(sdf.parse("1990-01-01"));
         nuevo.setPhone("+1234567890");
