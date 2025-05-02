@@ -37,10 +37,10 @@ Asegúrate de definir las siguientes variables de entorno:
 
 | Método | Endpoint         | Descripción             |
 |--------|------------------|-------------------------|
-| POST   | `/users/{Save User}`        | Crear usuario           |
-| GET    | `/users/{Get User}`    | Obtener usuario por ID  |
-| PATCH  | `/users/{Uptade User}`    | Actualizar usuario      |
-| DELETE | `/users/{Delete User}`    | Eliminar usuario por ID |
+| POST   | `/users/Save User/{id}`        | Crear usuario           |
+| GET    | `/users/Get User/{id}`    | Obtener usuario por ID  |
+| PATCH  | `/users/Uptade User/{id}`    | Actualizar usuario      |
+| DELETE | `/users/Delete User/{id}`    | Eliminar usuario por ID |
 
 **Base URL por defecto:** `http://localhost:8080`
 
