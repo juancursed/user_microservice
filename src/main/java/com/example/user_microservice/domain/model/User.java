@@ -31,7 +31,7 @@ public class User {
     private String email;
 
     @NotBlank(message = "La contraseña es obligatoria")
-    @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
+    @Size(min = 6, message = "La contraseña debe tener al menos 8 caracteres")
     private String password;
 
     @NotNull(message = "La fecha de nacimiento es obligatoria")
@@ -66,6 +66,6 @@ public class User {
 
     @NotNull(message = "El rol es obligatorio")
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private Role role = Role.CLIENT;
 }
 

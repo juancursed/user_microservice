@@ -75,7 +75,7 @@ class SaveUserUseCaseTest {
         }
 
         @Override
-        public void deleteById(UUID id) {
+        public void  deleteById(UUID id) {
 
         }
 
