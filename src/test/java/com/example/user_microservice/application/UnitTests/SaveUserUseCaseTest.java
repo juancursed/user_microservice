@@ -1,9 +1,8 @@
-package com.example.user_microservice.usecase;
-
-import com.example.user_microservice.domain.model.Role;
-import com.example.user_microservice.domain.model.User;
+package com.example.user_microservice.application.UnitTests;
 
 import com.example.user_microservice.application.usecase.SaveUserUseCase;
+import com.example.user_microservice.domain.model.Role;
+import com.example.user_microservice.domain.model.User;
 import com.example.user_microservice.domain.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

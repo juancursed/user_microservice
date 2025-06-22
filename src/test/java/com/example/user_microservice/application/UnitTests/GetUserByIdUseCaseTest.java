@@ -1,5 +1,6 @@
-package com.example.user_microservice.application.usecase;
+package com.example.user_microservice.application.UnitTests;
 
+import com.example.user_microservice.application.usecase.GetUserByIdUseCase;
 import com.example.user_microservice.domain.model.Role;
 import com.example.user_microservice.domain.model.User;
 import com.example.user_microservice.domain.repository.UserRepository;
