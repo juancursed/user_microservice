@@ -1,4 +1,4 @@
-package com.example.user_microservice.usecase;
+package com.example.user_microservice.application.UnitTests;
 
 import com.example.user_microservice.application.usecase.GetUserByEmailUseCase;
 import com.example.user_microservice.domain.model.Role;
