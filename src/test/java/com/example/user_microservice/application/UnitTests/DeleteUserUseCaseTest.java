@@ -1,4 +1,4 @@
-package com.example.user_microservice.usecase;
+package com.example.user_microservice.application.UnitTests;
 
 import com.example.user_microservice.application.usecase.DeleteUserUseCase;
 import com.example.user_microservice.domain.repository.UserRepository;
