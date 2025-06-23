@@ -49,6 +49,12 @@ public class UserController {
         return getUserByIdUseCase.execute(id);
   }
 
+  @GetMapping("/email/{email}")
+    public  User getUserByEmail(@PathVariable String email)
+  {
+            return getUserByEmailUseCase.execute(email);
+        }
+
   @PatchMapping("/{id}")
   public ResponseEntity<?> updateUser(
           @PathVariable UUID id ,
